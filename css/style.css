@@ -1,0 +1,243 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+  font-family: 'Nunito';
+}
+
+html {
+  font-size: 62.5%;
+  box-sizing: border-box;
+}
+
+body{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.3s;
+}
+
+.main-container{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 5px 5px 10px;
+    border-radius: 8px;
+}
+
+.sub-container{
+    height: 550px;
+    width: 450px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: 0.5s;
+}
+
+.card1{
+    background-color: lightgreen;
+    border-radius: 8px 0px 0px 8px;
+    opacity: 1.0;
+}
+
+.card2{
+    background-color: lightgreen;
+    border-radius: 0px 8px 8px 0px;
+    opacity: 0.5;
+}
+
+.sub-container h1{
+    padding: 20px;
+    font-size: 40px;
+}
+
+.score{
+    padding: 20px;
+    font-size: 90px;
+}
+
+.current{
+    background-color: lightyellow;
+    margin-top: 100px;
+    border-radius: 8px; 
+    width: 200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+
+.current h2{
+    font-size: 18px;
+
+}
+
+.current h1{
+    padding:0;
+    font-size: 50px;
+    height: 65px;
+}
+
+.btn-newGame{
+    position: absolute;
+    color: white;
+    padding: 10px;
+    border-radius: 0 0 30px 30px;
+    top: 0px;
+    width: 160px;
+    border: none;
+    background-color: #f1423a;
+    box-shadow: 0px 0px 7px black;
+    font-size: 15px;
+    font-weight: bolder;
+}
+
+.btn-newGame:active, .btn-hold:active{
+    box-shadow: 0px 0px 3px black;
+}
+
+.btn-hold{
+    position: absolute;
+    color: black;
+    padding: 15px;
+    border-radius: 25px;
+    top: 400px;
+    width: 100px;
+    background-color: lightblue;
+    border: none;
+    box-shadow: 0px 0px 7px black;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+/* wheel style ===============================================*/
+.btn-spin{
+    position: absolute;
+    top: 160px;
+    right: px;
+    border: 1px solid #0b0b0b;
+    border-radius: 50%;
+    width: 65px;
+    height: 65px;
+    background-color: gold;
+    transition: 0.1s;
+    box-shadow: 0 2px 10px black;
+    font-weight: bolder;
+}
+
+.btn-spin:active{ box-shadow: none; }
+
+.wheel-point{
+    position: absolute;
+    top: 100px;
+    height: 70px;
+    width: 0;
+    box-shadow: 0 1px 10px black;
+    border-left: 15px solid transparent;
+    border-right: 15px solid transparent;
+    border-bottom: 25px solid black;
+}
+
+.wheel{
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    position: absolute;
+    top: 90px;
+    background-color: white;
+    border: 10px solid #0b0b0b;
+    box-shadow: inset 0 0 8px 2px black;
+    transition: all 1s;
+}
+
+.line{
+    position: absolute;
+    top: 90px;
+    width: 180px;
+    height: 5px;
+    background-color: #0b0b0b;
+}
+
+.line1{ transform: rotate(0deg); }
+
+.line2{ transform: rotate(61deg); }
+
+.line3{ transform: rotate(122deg); }
+
+.number{
+    position: absolute;
+    font-size: 30px;
+    padding-top: 10px;
+}
+
+.no1{
+    top: -5px;
+    right: 82px;
+}
+
+.no2{
+    top: 30px;
+    right: 19px;
+    transform: rotate(60deg);
+}
+
+.no3{
+    top: 101px;
+    right: 20px;
+    transform: rotate(120deg);
+}
+
+.no4{
+    top: 136px;
+    right: 82px;
+    transform: rotate(180deg);
+}
+
+.no5{
+    top: 100px;
+    right: 142px;
+    transform: rotate(240deg);
+}
+
+.no6{
+    top: 30px;
+    right: 142px;
+    transform: rotate(300deg);
+}
+/* ===========================================================*/
+
+/* dark-mode switch ==========================================*/
+.mode{
+    position: absolute;
+    top: -50px;
+    background-color: white;
+    border-radius: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #111111;
+    width: 60px;
+    height: 30px;
+    gap: 10px;
+    transform: scale(1.5);
+}
+
+.logo{ height: 20px; }
+
+.sun{ height: 19px; }
+
+.ball{
+    position: absolute;
+    background-color: white;
+    border-radius: 50%;
+    width: 23px;
+    height: 23px;
+    top: 3.5px;
+    right: 20px;
+    transition: transform 0.2s linear;
+}
+/* ===========================================================*/
